@@ -10,3 +10,11 @@ With WP Woo Custom Functions, you can:
     - Ease of Implementation: Integrate and manage custom functions easily and intuitively, without the need for complex code modifications.
 
 WP Woo Custom Functions is the perfect ally for developers and site owners who want a flexible and powerful solution to customize every aspect of their WordPress installation, while ensuring system security and stability.
+
+
+== Installation ==
+
+1. Upload the plugin to the `/wp-content/plugins/` directory
+2. Activate the plugin through the 'Plugins' menu in WordPress
+3. Click on WPWoo CF button from the Admin dasboard
+4. Start editing your custom code

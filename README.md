@@ -1,4 +1,5 @@
 === wp-woo-custom-functions ===
+
 Contributors: Phaser Design Ltd
 Tags: functions, custom functions
 Requires at least: 3.0.1

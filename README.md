@@ -1,12 +1,12 @@
 === wp-woo-custom-functions ===
 
-Contributors: Phaser Design Ltd
-Tags: functions, custom functions
-Requires at least: 3.0.1
-Tested up to: 6.6.1
-Stable tag: 1
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Contributors: Phaser Design Ltd  
+Tags: functions, custom functions  
+Requires at least: 3.0.1  
+Tested up to: 6.6.1  
+Stable tag: 1  
+License: GPLv2 or later  
+License URI: http://www.gnu.org/licenses/gpl-2.0.html  
 
 WP Woo Custom Functions is a WordPress plugin designed to offer unparalleled versatility, allowing users to insert custom functions that enhance and personalize the entire WordPress installation, not just WooCommerce. This plugin eliminates the need to create and maintain a child theme, allowing the main theme to remain intact and updatable without issues.
 

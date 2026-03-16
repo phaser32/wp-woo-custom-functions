@@ -1,29 +1,39 @@
-=== wp-woo-custom-functions ===
+# WP Woo Custom Functions (v2.0)
 
-Contributors: Phaser Design Ltd  
-Tags: functions, custom functions  
-Requires at least: 3.0.1  
-Tested up to: 6.6.1  
-Stable tag: 1  
-License: GPLv2 or later  
-License URI: http://www.gnu.org/licenses/gpl-2.0.html  
+> [!ATTENZIONE]
+> **AGGIORNAMENTO DALLA VERSIONE 1.0**: 
+> Questa versione introduce una nuova architettura di sicurezza. Se stai aggiornando, il tuo vecchio codice non verrà perso ma non sarà più eseguito automaticamente dal file principale. 
+> **Cosa fare:** Prima di aggiornare, copia il tuo codice dal vecchio file `wp-woo-custom-functions.php`. Dopo l'aggiornamento, incollalo nel nuovo editor all'interno della dashboard e clicca su SALVA.
 
-WP Woo Custom Functions is a WordPress plugin designed to offer unparalleled versatility, allowing users to insert custom functions that enhance and personalize the entire WordPress installation, not just WooCommerce. This plugin eliminates the need to create and maintain a child theme, allowing the main theme to remain intact and updatable without issues.
+**WP Woo Custom Functions** è un plugin per WordPress progettato per offrire un ambiente di sviluppo sicuro e centralizzato. Consente di inserire snippet di codice PHP, hook di WooCommerce e personalizzazioni del core senza la necessità di creare un tema child o modificare file via FTP.
 
-With WP Woo Custom Functions, you can:
+A differenza di altri manager di snippet, questa versione 2.0 introduce un'architettura **"Safe-Save"** che protegge il tuo sito dai crash (White Screen of Death).
 
-    - Interact with Themes and Plugins: Add functions that interact not only with the current theme but also with any installed plugins, enhancing and personalizing the entire site experience.
-    - Enhance WooCommerce Functionalities: While not limited to WooCommerce, the plugin provides powerful tools to extend and customize your online store's functionalities.
-    - Customize the WordPress Core: Add functions that modify the behavior of WordPress itself, offering complete flexibility in site customization.
-    - Eliminate the Need for a Child Theme: Custom functions can be added directly through the plugin, keeping the main theme updatable without disruptions.
-    - Ease of Implementation: Integrate and manage custom functions easily and intuitively, without the need for complex code modifications.
+## Novità della Versione 2.0
 
-WP Woo Custom Functions is the perfect ally for developers and site owners who want a flexible and powerful solution to customize every aspect of their WordPress installation, while ensuring system security and stability.
+- **Safe-Save System (Loopback Test)**: Prima di confermare il salvataggio, il plugin effettua un test automatico di stabilità. Se il codice causa un errore fatale, il salvataggio viene bloccato e il sito rimane online.
+- **Architettura Ibrida (File + DB)**: Il codice viene eseguito tramite un file fisico (`custom.php`) per massime prestazioni (compatibile con OPcache), ma viene salvato contemporaneamente in una tabella dedicata del Database come backup di emergenza.
+- **Editor Professionale Integrato**: Sfrutta la potenza di **CodeMirror** (lo stesso editor di WordPress) con evidenziazione della sintassi, controllo degli errori in tempo reale e numeri di riga.
+- **Emergency Recovery**: Un tasto dedicato permette di ripristinare istantaneamente il codice dal Database nel caso in cui il file fisico venga accidentalmente cancellato o corrotto.
+- **Interfaccia Responsive**: Editor dinamico che si adatta all'altezza dello schermo per un'esperienza di sviluppo fluida.
 
+## Caratteristiche Principali
 
-== Installation ==
+- **Indipendenza dal Tema**: Le tue funzioni rimangono attive anche se cambi tema o aggiorni quello attuale.
+- **Zero Overhead**: In fase di navigazione (frontend), il plugin non interroga il database. Esegue semplicemente un `include_once` del file fisico.
+- **Controllo Totale**: Ideale per sviluppatori che vogliono un unico posto dove gestire la logica del sito senza la frammentazione di mille plugin diversi.
 
-1. Upload the plugin to the `/wp-content/plugins/` directory
-2. Activate the plugin through the 'Plugins' menu in WordPress
-3. Click on WPWoo CF button from the Admin dasboard
-4. Start editing your custom code
+## Installazione
+
+1. Carica la cartella `wp-woo-custom-functions` nella directory `/wp-content/plugins/`.
+2. Attiva il plugin tramite il menu 'Plugin' di WordPress.
+3. Clicca sulla voce **WPWoo CF** nella barra laterale dell'amministratore.
+4. Inizia a scrivere il tuo codice e premi "SALVA".
+
+## Sicurezza (PHP 8.4 Ready)
+
+Il plugin è stato testato e ottimizzato per le versioni più recenti di PHP (fino alla 8.4) e WordPress. Grazie al sistema di test temporaneo, riduce drasticamente il rischio di mandare il sito offline durante le modifiche live.
+
+## Licenza
+
+Distribuito sotto licenza GPLv2 o successiva.

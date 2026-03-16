@@ -1,6 +1,7 @@
- Version 2, June 1991
+GNU GENERAL PUBLIC LICENSE
+Version 2, June 1991
 
-Copyright (C) 2024 Alessandro Valori, Phaser Design Ltd
+Copyright (C) 2024-2026 Alessandro Valori, Phaser Design Ltd
 
 
 Everyone is permitted to copy and distribute verbatim copies
